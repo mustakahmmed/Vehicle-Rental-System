@@ -6,6 +6,6 @@ dotenv.config({path:path.join(process.cwd(),".env")});
 
 const config = {
     connection_str: process.env.CONNECTION_STRING,
-    port: process.env.PORT
+    port: process.env.PORT? parseInt(process.env.PORT, 10) : 5000,
 }
 export default config;
